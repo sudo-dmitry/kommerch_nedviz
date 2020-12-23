@@ -1,0 +1,16 @@
+.carousel {
+  &__title {
+    font-size: 2rem;
+  }
+  &__logos {
+    margin: 100px 0;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    svg {
+      fill: $color-main-dark;
+      margin: 0 30px;
+    }
+  }
+}

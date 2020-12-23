@@ -1,0 +1,51 @@
+.objects {
+  padding: 100px 0;
+  .wrapper  {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+    "accommodation business land"
+    "industrial industrial industrial";
+    &__accommodation {
+      grid-area: accommodation;
+    }
+    &__business {
+      grid-area: business;
+    }
+    &__land {
+      grid-area: land;
+    }
+    &__industrial {
+      grid-area: industrial;
+    }
+    .item {
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      &._long {
+        background-position: 100% 40% !important;
+      }
+    }
+    a {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color-dark;
+        opacity: 0;
+        transition: .3s;
+      }
+      &:hover {
+        &:after {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
