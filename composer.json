@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/kommerch_nedviz",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dima",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
