@@ -17,8 +17,10 @@
   &__picts {
     width: 60%;
     position: relative;
+    margin: -50px 0;
     @media #{$md} {
       width: 80%;
+      margin: inherit;
     }
     @media #{$sm} {
       height: 300px;
@@ -38,7 +40,7 @@
     .tiles {
       height: 100%;
       background-size: cover;
-      background-position: 100% 100%;
+      background-repeat: no-repeat;
     }
   }
   .button-hidden {

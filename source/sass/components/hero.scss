@@ -48,10 +48,10 @@
       @media #{$md} {
         flex-direction: row;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-bottom: 40px;
       }
-      @media #{$sm} {
+      @media #{$screen400} {
         margin-bottom: 0;
       }
       .block {
