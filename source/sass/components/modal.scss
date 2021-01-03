@@ -1,0 +1,96 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(11,12,16,.9);
+  &__content {
+    background-color: $color-dark;
+    margin: 10% auto;
+    padding: 30px;
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 0 rgba(69, 162, 157, .2), 0 7px 20px 0 rgba(69, 162, 157, .17);
+    position: relative;
+    @media #{$md} {
+      width: 80%;
+    }
+    @media #{$sm} {
+      width: 90%;
+      margin: 20% auto;
+      padding: 20px;
+    }
+    .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: .2s;
+      &:hover {
+        color: $color-main-dark;
+      }
+    }
+    .modal-header {
+      font-size: 1.4rem;
+      font-weight: 600;
+      width: 90%;
+      @media #{$sm} {
+        font-size: 1rem;
+      }
+    }
+    .modal-body {
+      padding: 40px 0;
+      @media #{$sm} {
+        padding: 20px 0;
+      }
+      .form-group {
+        padding: 10px 0;
+        label {
+          font-size: 1.4rem;
+          width: 120px;
+          @media #{$sm} {
+            font-size: 1.2rem;
+            width: 100px;
+          }
+        }
+        input {
+          border-radius: 2px;
+          border: 1px solid $color-main-dark;
+          font-size: 1.4rem;
+          color: #ffffff;
+          padding: 5px;
+          width: calc(100% - 140px);
+          @media #{$sm} {
+            font-size: 1.2rem;
+            width: calc(100% - 110px);
+          }
+        }
+      }
+      .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+        transition: .3s;
+        @media #{$sm} {
+          font-size: 1rem;
+        }
+      }
+      .fail {
+        background-color: rgba(239, 136, 145, .6);
+        color: $color-black;
+      }
+      .success {
+        background-color: rgba(149, 230, 158, .6);
+        color: $color-black;
+      }
+    }
+  }
+}

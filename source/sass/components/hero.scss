@@ -26,21 +26,54 @@
       padding-top: 200px;
       padding-bottom: 120px;
       text-transform: uppercase;
+      @media #{$md} {
+        padding-bottom: 40px;
+        font-size: 2.8rem;
+      }
+      @media #{$sm} {
+        font-size: 1.6rem;
+        width: 100%;
+        padding-top: 120px;
+      }
     }
   }
   &__content {
     justify-content: space-between;
+    @media #{$md} {
+      flex-direction: column;
+    }
     .blocks {
       width: 35%;
+      flex-direction: column;
+      @media #{$md} {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+      }
       .block {
         padding-bottom: 40px;
         font-size: 1.6rem;
         line-height: 2.4rem;
+        @media #{$md} {
+          width: 45%;
+        }
+        @media #{$sm} {
+          font-size: 1.1rem;
+          line-height: 1.9rem;
+          width: 45%;
+        }
         .percent {
           font-size: 2.2rem;
+          @media #{$sm} {
+            font-size: 1.6rem;
+          }
           span {
             font-size: 3rem;
             font-weight: 400;
+            @media #{$sm} {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -48,6 +81,9 @@
     .button {
       align-items: flex-end;
       padding-bottom: 40px;
+      @media #{$sm} {
+        margin: 0 auto;
+      }
     }
   }
 }

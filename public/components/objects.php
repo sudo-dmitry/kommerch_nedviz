@@ -2,18 +2,38 @@
     <div class="container">
         <div class="wrapper grid">
 
-            <a href="" class="wrapper__accommodation">
+            <div class="wrapper__accommodation pic">
                 <div class="item lazy" data-background-image="public/img/acco.jpg"></div>
-            </a>
-            <a href="" class="wrapper__business">
+                <div class="pic__text">
+                    Помещения
+                    <br>
+                    <span>1 389 объектов</span>
+                </div>
+            </div>
+            <div class="wrapper__business pic">
                 <div class="item lazy" data-background-image="public/img/business.jpg"></div>
-            </a>
-            <a href="" class="wrapper__land">
+                <div class="pic__text">
+                    Бизнес
+                    <br>
+                    <span>193 объекта</span>
+                </div>
+            </div>
+            <div class="wrapper__land pic">
                 <div class="item lazy" data-background-image="public/img/land.jpg"></div>
-            </a>
-            <a href="" class="wrapper__industrial">
+                <div class="pic__text">
+                    Земля
+                    <br>
+                    <span>222 объекта</span>
+                </div>
+            </div>
+            <div class="wrapper__industrial pic">
                 <div class="item _long lazy" data-background-image="public/img/industrial.jpg"></div>
-            </a>
+                <div class="pic__text">
+                    Индустриальная недвижимость
+                    <br>
+                    <span>28 объектов</span>
+                </div>
+            </div>
 
 
         </div>

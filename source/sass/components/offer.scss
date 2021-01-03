@@ -1,12 +1,59 @@
 .offer {
-  height: 40vh;
   padding: 50px 0;
+  height: 600px;
+  @media #{$sm} {
+    padding: 10px 0;
+  }
   &__content {
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    .button {
+      @media #{$sm} {
+        display: none;
+      }
+    }
+  }
+  &__picts {
+    width: 60%;
+    position: relative;
+    @media #{$md} {
+      width: 80%;
+    }
+    @media #{$sm} {
+      height: 300px;
+      width: 100%;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-dark;
+      opacity: .6;
+      z-index: 2;
+    }
+    .tiles {
+      height: 100%;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
+  }
+  .button-hidden {
+    display: none;
+    text-align: center;
+    @media #{$sm} {
+      display: block;
+      margin-top: 50px;
+    }
   }
   .container {
     height: 100%;
+    justify-content: space-between;
+    @media #{$sm} {
+      flex-direction: column;
+    }
   }
 }

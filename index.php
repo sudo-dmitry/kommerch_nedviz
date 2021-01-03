@@ -24,6 +24,8 @@
 
 <?php include 'public/components/carousel.php'; ?>
 
+<?php include 'public/components/modal.php'; ?>
+
 <?php include 'public/components/footer.php'; ?>
 
 

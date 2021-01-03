@@ -37,6 +37,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   transition: .3s;
+  cursor: pointer;
   &:hover {
     background-color: $color-main-dark;
     border: 2px solid $color-main-dark;

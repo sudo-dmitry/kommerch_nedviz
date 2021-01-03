@@ -1,16 +1,30 @@
 footer {
   padding: 50px 0;
-
   box-shadow: 0 -8px 6px -6px $color-main;
   background-color: $color-dark;
-
+  @media #{$sm} {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
 
   .wrapper {
     justify-content: space-between;
     align-items: center;
+    @media #{$sm} {
+      flex-direction: column;
+    }
     .text {
       font-size: 1.2rem;
       width: 60%;
+      @media #{$sm} {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    .button {
+      @media #{$sm} {
+        margin: 50px 0;
+      }
     }
   }
 }

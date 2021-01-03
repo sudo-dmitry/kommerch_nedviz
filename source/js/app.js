@@ -44,19 +44,45 @@ $(document).ready(function(){
         arrows: false,
         pauseOnFocus: false,
         pauseOnHover: false,
-        // responsive: [
-        //     {
-        //         breakpoint: 540,
-        //         settings: {
-        //             slidesToShow: 1,
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 770,
-        //         settings: {
-        //             slidesToShow: 2,
-        //         }
-        //     }
-        // ]
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
+});
+
+
+// Modal
+
+var modal = $('#simpleModal');
+
+var mbtn =  $('.mbtn');
+
+var closeBtn = $('.closeBtn');
+
+$(document).ready(function() {
+   mbtn.on('click', function() {
+      modal.show();
+   });
+   closeBtn.on('click', function() {
+       modal.hide();
+   });
+});
+
+$('body').bind('click', function (e) {
+    if($(e.target).hasClass("modal")) {
+        modal.hide();
+    }
 });

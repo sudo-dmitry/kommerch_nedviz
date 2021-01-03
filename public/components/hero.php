@@ -2,7 +2,7 @@
     <div class="container">
         <h1>Подберём идеальную коммерческую недвижимость под ваш запрос</h1>
         <div class="hero__content flex">
-            <div class="blocks">
+            <div class="blocks flex">
                 <div class="block">
                     <div class="percent">
                         до <span>35%</span>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="button flex">
-                <a href="" class="btn">Бесплатная консультация</a>
+                <a href="javascript:void(0);" class="btn mbtn">Бесплатная консультация</a>
             </div>
         </div>
     </div>

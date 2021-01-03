@@ -6,9 +6,12 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
+  z-index: 9;
   box-shadow: 0 8px 6px -6px $color-main;
   background-color: rgba(11, 12, 16, .9);
+  @media #{$sm} {
+    display: none;
+  }
 
 
   .wrapper {
@@ -27,6 +30,39 @@
       }
       .address {
         transition: .3s;
+      }
+    }
+  }
+}
+
+.navbar-mobile {
+  display: none;
+  padding: 10px 0;
+
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 8px 6px -6px $color-main;
+  background-color: rgba(11, 12, 16, .9);
+  @media #{$sm} {
+    display: block;
+  }
+
+
+  .wrapper {
+    flex-direction: column;
+    .logo {
+      margin: auto 0;
+      font-weight: 600;
+      font-size: .9rem;
+      padding-bottom: 5px;
+    }
+    .contact-info {
+      .phone {
+        font-size: .9rem;
+        font-weight: 600;
       }
     }
   }
