@@ -51,8 +51,12 @@
         justify-content: space-between;
         margin-bottom: 40px;
       }
+      @media #{$sm} {
+        padding: 20px 0;
+      }
       @media #{$screen400} {
         margin-bottom: 0;
+        padding: inherit;
       }
       .block {
         padding-bottom: 40px;
