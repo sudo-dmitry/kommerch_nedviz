@@ -51,6 +51,9 @@
         justify-content: space-evenly;
         margin-bottom: 40px;
       }
+      @media #{$sm} {
+        margin-bottom: 0;
+      }
       .block {
         padding-bottom: 40px;
         font-size: 1.6rem;
