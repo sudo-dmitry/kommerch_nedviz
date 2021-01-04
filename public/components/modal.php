@@ -1,5 +1,19 @@
 <?php
 
+    require 'vendor/autoload.php';
+    use Mailgun\Mailgun;
+
+    $mgClient = Mailgun::create('PRIVATE_API_KEY', 'https://API_HOSTNAME');
+    $domain = "kommerchnedviz.herokuapp.com";
+    $params = array(
+        'from'    => 'Excited User <YOU@YOUR_DOMAIN_NAME>',
+        'to'      => 'dmitry.v.pletnev@gmail.com',
+        'subject' => 'Hello',
+        'text'    => 'Testing some Mailgun awesomness!'
+    );
+
+    $mgClient->messages()->send($domain, $params);
+
     $msg = '';
     $msgClass = '';
 
