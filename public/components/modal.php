@@ -2,8 +2,8 @@
 
 //    require_once 'sendemail.php';
 
-        require 'vendor/autoload.php';
-
+//        require 'vendor/autoload.php';
+//
 //        $from = new SendGrid\Email(null, "test@example.com");
 //        $subject = "Hello World from the SendGrid PHP Library!";
 //        $to = new SendGrid\Email(null, "dmitry.v.pletnev@gmail.com");
@@ -34,32 +34,18 @@
         <?php
 
         if(!empty($name) && !empty($tel)) {
-//                $toEmail = 'dmitry.v.pletnev@gmail.com';
-//                $subject = 'Запрос от '.$name;
-//                $body = '
-//                    <h2>Запрос на звонок</h2>
-//                    <h4>Имя</h4><p>'.$name.'</p>
-//                    <h4>Телефон</h4><p>'.$tel.'</p>
-//                ';
-//
-//                $headers = "MIME-Version: 1.0" ."\r\n";
-//                $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
-//
-//                $headers .="From: " .$name. "<" .$tel. ">". "\r\n";
+                $toEmail = 'dmitry.v.pletnev@gmail.com';
+                $subject = 'Запрос от '.$name;
+                $body = '
+                    <h2>Запрос на звонок</h2>
+                    <h4>Имя</h4><p>'.$name.'</p>
+                    <h4>Телефон</h4><p>'.$tel.'</p>
+                ';
 
-            $from = new SendGrid\Email(null, "test@example.com");
-            $subject = "Hello World from the SendGrid PHP Library!";
-            $to = new SendGrid\Email(null, "dmitry.v.pletnev@gmail.com");
-            $content = new SendGrid\Content("text/plain", "Hello, Email!");
-            $mail = new SendGrid\Mail($from, $subject, $to, $content);
+                $headers = "MIME-Version: 1.0" ."\r\n";
+                $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
 
-            $apiKey = getenv('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');
-            $sg = new \SendGrid($apiKey);
-
-            $response = $sg->client->mail()->send()->post($mail);
-            echo $response->statusCode();
-            echo $response->headers();
-            echo $response->body();
+                $headers .="From: " .$name. "<" .$tel. ">". "\r\n";
 
                 if(mail($toEmail, $subject, $body, $headers)) {
                     $msg = 'Ваш запрос отправлен';
