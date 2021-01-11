@@ -27,9 +27,13 @@
 
 require 'vendor/autoload.php';
 
+use SendGrid;
+
 echo 1;
 
 $from = new SendGrid\Email(null, "test@example.com");
+
+?><pre><? print_r($from) ?></pre><?php
 
 $subject = "Hello World from the SendGrid PHP Library!";
 $to = new SendGrid\Email(null, "dmitry.v.pletnev@gmail.com");
