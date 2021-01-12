@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-    require 'vendor/autoload.php';
+    require './vendor/autoload.php';
 
 //    class SendEmail {
 //
@@ -33,6 +33,7 @@ ini_set("display_errors", 1);
 
 
 echo 1;
+echo 2;
 
 $from = new SendGrid\Email(null, "test@example.com");
 
@@ -43,7 +44,7 @@ $to = new SendGrid\Email(null, "dmitry.v.pletnev@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = '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';
+$apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
 
 ?><pre><? print_r($sg) ?></pre><?php
@@ -54,6 +55,6 @@ echo $response->statusCode();
 echo $response->headers();
 echo $response->body();
 
-echo 2;
+echo 2000;
 
 ?>
