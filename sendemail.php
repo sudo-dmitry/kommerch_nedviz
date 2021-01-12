@@ -33,13 +33,15 @@ ini_set("display_errors", 1);
 
 
 echo 1;
-echo 2;
 
 $from = new SendGrid\Mail\EmailAddress("test@example.com", "Dima-test");
 
-?><pre><? print_r($from) ?></pre><?php
+echo 2;
 
 $subject = "Hello World from the SendGrid PHP Library!";
+
+echo 3;
+
 $to = new SendGrid\Mail\EmailAddress("dmitry.v.pletnev@gmail.com", null);
 $content = new SendGrid\Mail\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail\Mail($from, $subject, $to, $content);
