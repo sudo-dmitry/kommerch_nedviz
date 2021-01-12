@@ -47,19 +47,39 @@ $to = new SendGrid\Mail\EmailAddress("dmitry.v.pletnev@gmail.com", null);
 echo 4;
 
 $content = new SendGrid\Mail\Content("text/plain", "Hello, Email!");
+
+echo 5;
+
 $mail = new SendGrid\Mail\Mail($from, $subject, $to, $content);
 
+echo 6;
+
 $apiKey = getenv('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');
+
+echo 7;
+
 $sg = new \SendGrid($apiKey);
+
+echo 8;
 
 ?><pre><? print_r($sg) ?></pre><?php
 
+echo 9;
+
 $response = $sg->client->mail()->send()->post($mail);
 
+echo 10;
+
 echo $response->statusCode();
+
+echo 11;
+
 echo $response->headers();
+
+echo 12;
+
 echo $response->body();
 
-echo 2000;
+echo 13;
 
 ?>
