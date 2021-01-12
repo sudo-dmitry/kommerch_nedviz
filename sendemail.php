@@ -7,6 +7,8 @@
         public static function SendMail($from, $subject, $content) {
             $key = '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';
 
+            echo 1;
+
             $email = new \SendGrid\Mail\Mail();
             $email->setFrom($from);
             $email->setSubject($subject);
