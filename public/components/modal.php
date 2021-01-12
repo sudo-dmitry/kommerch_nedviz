@@ -1,23 +1,5 @@
 <?php
 
-//    require_once 'sendemail.php';
-
-        require 'vendor/autoload.php';
-
-        $from = new SendGrid\Email(null, "test@example.com");
-        $subject = "Hello World from the SendGrid PHP Library!";
-        $to = new SendGrid\Email(null, "dmitry.v.pletnev@gmail.com");
-        $content = new SendGrid\Content("text/plain", "Hello, Email!");
-        $mail = new SendGrid\Mail($from, $subject, $to, $content);
-
-        $apiKey = getenv('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');
-        $sg = new \SendGrid($apiKey);
-
-        $response = $sg->client->mail()->send()->post($mail);
-        echo $response->statusCode();
-        echo $response->headers();
-        echo $response->body();
-
     $msg = '';
     $msgClass = '';
 
