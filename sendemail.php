@@ -50,11 +50,11 @@ $content = new SendGrid\Mail\Content("text/plain", "Hello, Email!");
 
 echo 5;
 
-$mail = new SendGrid\Mail\Mail($from, $subject, $to, $content);
+//$mail = new SendGrid\Mail\Mail($from, $subject, $to, $content);
 
-echo 66;
+echo 6;
 
-$apiKey = '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';
+$apiKey = getenv('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');
 
 echo 7;
 
