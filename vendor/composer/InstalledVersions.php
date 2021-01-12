@@ -29,11 +29,20 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'bd0ca06d72d9ac914c108c7459f6f85001802ab8',
+    'reference' => '5fb4a740e29f5a865719099e5a3d5865c1439f34',
     'name' => 'vendor_name/kommerch_nedviz',
   ),
   'versions' => 
   array (
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'v6.2.0',
+      'version' => '6.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e38888a75c070304ca5514197d4847a59a5c853f',
+    ),
     'sendgrid/php-http-client' => 
     array (
       'pretty_version' => '3.13.0',
@@ -75,7 +84,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bd0ca06d72d9ac914c108c7459f6f85001802ab8',
+      'reference' => '5fb4a740e29f5a865719099e5a3d5865c1439f34',
     ),
   ),
 );

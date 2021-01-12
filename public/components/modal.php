@@ -1,5 +1,8 @@
 <?php
 
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+
     $msg = '';
     $msgClass = '';
 
@@ -16,20 +19,42 @@
         <?php
 
         if(!empty($name) && !empty($tel)) {
-                $toEmail = 'dmitry.v.pletnev@gmail.com';
-                $subject = 'Запрос от '.$name;
-                $body = '
-                    <h2>Запрос на звонок</h2>
-                    <h4>Имя</h4><p>'.$name.'</p>
-                    <h4>Телефон</h4><p>'.$tel.'</p>
-                ';
 
-                $headers = "MIME-Version: 1.0" ."\r\n";
-                $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
+//                $toEmail = 'dmitry.v.pletnev@gmail.com';
+//                $subject = 'Запрос от '.$name;
+//                $body = '
+//                    <h2>Запрос на звонок</h2>
+//                    <h4>Имя</h4><p>'.$name.'</p>
+//                    <h4>Телефон</h4><p>'.$tel.'</p>
+//                ';
+//
+//                $headers = "MIME-Version: 1.0" ."\r\n";
+//                $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
+//
+//                $headers .="From: " .$name. "<" .$tel. ">". "\r\n";
 
-                $headers .="From: " .$name. "<" .$tel. ">". "\r\n";
+            $mail = new PHPMailer\PHPMailer\PHPMailer();
+            $mail->IsSMTP(); // enable SMTP
 
-                if(mail($toEmail, $subject, $body, $headers)) {
+
+            $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPAuth = true; // authentication enabled
+            $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+            $mail->Host = "smtp.gmail.com";
+            $mail->Port = 465; // or 587
+            $mail->IsHTML(true);
+            $mail->Username = "dmitry.v.pletnev";
+            $mail->Password = "kegkup-judcaf-4hYtji";
+            $mail->SetFrom("dmitry.v.pletnev@gmail.com");
+            $mail->Subject = "Test";
+            $mail->Body = "hello";
+            $mail->AddAddress("dmitry.v.pletnev@gmail.com");
+
+
+//                if(mail($toEmail, $subject, $body, $headers)) {
+//                    $msg = 'Ваш запрос отправлен';
+//                    $msgClass = 'success';
+            if($mail->Send()) {
                     $msg = 'Ваш запрос отправлен';
                     $msgClass = 'success';
                 } else {
