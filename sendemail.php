@@ -33,9 +33,9 @@ ini_set("display_errors", 1);
 
 
 echo 1;
-echo 2;
+echo 3;
 
-$from = new SendGrid\Email(null, "test@example.com");
+$from = new SendGrid\Mail\EmailAddress("test@example.com", "Dima-test");
 
 ?><pre><? print_r($from) ?></pre><?php
 
