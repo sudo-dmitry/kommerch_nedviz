@@ -52,9 +52,9 @@ echo 5;
 
 $mail = new SendGrid\Mail\Mail($from, $subject, $to, $content);
 
-echo 6;
+echo 66;
 
-$apiKey = getenv('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');
+$apiKey = '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';
 
 echo 7;
 
