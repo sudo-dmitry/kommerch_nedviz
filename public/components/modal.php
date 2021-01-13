@@ -16,7 +16,7 @@
 //$mail->Port = 465; // or 587
 //$mail->IsHTML(true);
 //$mail->Username = "dmitry.v.pletnev";
-//$mail->Password = "kegkup-judcaf-4hYtji";
+//$mail->Password = "";
 //$mail->SetFrom("dmitry.v.pletnev@gmail.com");
 //$mail->Subject = "Test";
 //$mail->Body = "hello";
