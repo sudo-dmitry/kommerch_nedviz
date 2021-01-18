@@ -42,15 +42,15 @@
       position: relative;
       &._long {
         background-position: 100% 50% !important;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(11,12,16,.7);
+        &:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(11,12,16,.5);
+        }
       }
     }
     .pic {
