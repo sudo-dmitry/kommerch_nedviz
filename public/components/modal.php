@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label>Телефон:</label>
-                    <input type="tel" name="tel" class="form-control" value="<?php echo isset($_POST['tel']) ? $tel : ''; ?>">
+                    <input type="tel" name="tel" class="form-control" pattern='^\+?\d{0,13}' value="<?php echo isset($_POST['tel']) ? $tel : ''; ?>">
                 </div>
             </div>
             <div class="modal-footer">
