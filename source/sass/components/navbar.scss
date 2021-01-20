@@ -9,6 +9,9 @@
   z-index: 9;
   box-shadow: 0 8px 6px -6px $color-main;
   background-color: rgba(11, 12, 16, .9);
+  @media #{$md} and (orientation:landscape) {
+    display: none;
+  }
   @media #{$sm} {
     display: none;
   }
@@ -46,6 +49,9 @@
   z-index: 9;
   box-shadow: 0 8px 6px -6px $color-main;
   background-color: rgba(11, 12, 16, .9);
+  @media #{$md} and (orientation:landscape) {
+    display: block;
+  }
   @media #{$sm} {
     display: block;
   }

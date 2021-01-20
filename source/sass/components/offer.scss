@@ -1,6 +1,9 @@
 .offer {
   padding: 50px 0;
   height: 600px;
+  @media #{$md} and (orientation:landscape) {
+    padding: 10px 0;
+  }
   @media #{$sm} {
     padding: 10px 0;
   }
